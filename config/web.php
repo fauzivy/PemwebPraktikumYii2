@@ -52,6 +52,13 @@ $config = [
             ],
         ],
         */
+		'view' => [
+         'theme' => [
+             'pathMap' => [
+                '@app/views' => '@vendor/dmstr/yii2-adminlte-asset/example-views/yiisoft/yii2-app'
+             ],
+         ],
+    ],
     ],
     'params' => $params,
 
@@ -60,6 +67,8 @@ $config = [
         'class' => '\kartik\grid\Module'
 		]       
 	]
+	
+	
 ];
 
 if (YII_ENV_DEV) {

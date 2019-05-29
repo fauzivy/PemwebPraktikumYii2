@@ -4,20 +4,20 @@ use yii\helpers\Html;
 use yii\widgets\DetailView;
 
 /* @var $this yii\web\View */
-/* @var $model app\models\Mahasiswa */
+/* @var $model app\models\ProdiUser */
 
-$this->title = $model->nim;
-$this->params['breadcrumbs'][] = ['label' => 'Mahasiswas', 'url' => ['index']];
+$this->title = $model->kode_prodi;
+$this->params['breadcrumbs'][] = ['label' => 'Prodi Users', 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
 \yii\web\YiiAsset::register($this);
 ?>
-<div class="mahasiswa-view">
+<div class="prodi-user-view">
 
     <h1><?= Html::encode($this->title) ?></h1>
 
     <p>
-        <?= Html::a('Update', ['update', 'id' => $model->nim], ['class' => 'btn btn-primary']) ?>
-        <?= Html::a('Delete', ['delete', 'id' => $model->nim], [
+        <?= Html::a('Update', ['update', 'id' => $model->kode_prodi], ['class' => 'btn btn-primary']) ?>
+        <?= Html::a('Delete', ['delete', 'id' => $model->kode_prodi], [
             'class' => 'btn btn-danger',
             'data' => [
                 'confirm' => 'Are you sure you want to delete this item?',
@@ -29,10 +29,8 @@ $this->params['breadcrumbs'][] = $this->title;
     <?= DetailView::widget([
         'model' => $model,
         'attributes' => [
-            'nim',
-            'nama_mhs',
-            'alamat_mhs',
             'kode_prodi',
+            'nama_prodi',
         ],
     ]) ?>
 
